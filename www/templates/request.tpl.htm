@@ -1,0 +1,46 @@
+<ion-view title="{{dbTitle}}">
+    <ion-nav-buttons side="right">
+        <a class="button button-icon icon ion-plus" href="#/app/create"></a>
+    </ion-nav-buttons>
+    <div class="bar bar-subheader bar-positive">
+        <h2 class="title icon">Request</h2>
+    </div>
+    <ion-content class="has-header padding has-subheader">
+        <div class="list card">
+
+            <div class="item item-avatar">
+                <img src="img/pen.png"/>
+                <h2>{{requestData.title}}</h2>
+            </div>
+
+            <div class="item item-body">
+
+                <p>
+                    {{requestData.description}}
+                </p>
+                <p>Created: <strong>{{requestData.created | date:'dd MMMM yyyy HH:mm:ss'}}</strong><br/>By: <strong>{{requestData.commonauthor}}</strong></p>
+
+                <div class="item item-icon-left" ng-class="{'item-balanced':isApproved(),'item-assertive':isRejected()}">
+                    <i class="icon ion-pricetag"></i>
+                    <strong>{{requestData.status}}</strong>
+                </div>
+                <div class="item item-icon-left">
+                    <i class="icon ion-person"></i>
+                    <strong>{{requestData.approver}}</strong>
+                </div>
+
+
+            </div>
+
+
+            <div class="button-bar" ng-show="showActionButtons()">
+                <button class="button  ion-checkmark-round button-balanced" ng-click="approve()">&nbsp;Approve</button>
+                <button class="button ion-close-round button-assertive" ng-click="reject()">&nbsp;Reject</button>
+
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>
+
+

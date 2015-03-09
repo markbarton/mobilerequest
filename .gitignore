@@ -1,0 +1,8 @@
+node_modules/
+.idea/
+hooks/
+platforms/
+plugins/
+scss/
+www/lib/jQuery/src/var/toString.js
+www/lib/

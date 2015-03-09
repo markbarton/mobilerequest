@@ -1,0 +1,13 @@
+<ion-view title="{{dbTitle}}">
+    <ion-nav-buttons side="right">
+        <a class="button button-icon icon ion-plus" href="#/app/create"></a>
+    </ion-nav-buttons>
+    <div class="bar bar-subheader bar-positive">
+        <h2 class="title icon"><i class="icon ion-home padding-right"></i>Home</h2>
+    </div>
+    <ion-content class="has-header padding has-subheader">
+      <div class="card">
+            <div class="item item-text-wrap" ng-bind-html="homeContent"></div>
+        </div>
+    </ion-content>
+</ion-view>

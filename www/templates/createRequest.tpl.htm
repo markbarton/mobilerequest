@@ -1,0 +1,26 @@
+<ion-view title="{{dbTitle}}">
+
+    <div class="bar bar-subheader bar-positive">
+        <h2 class="title icon"><i class="icon ion-gear-a padding-right"></i>New Request</h2>
+    </div>
+    <ion-content class="has-header padding has-subheader">
+        <div class="list">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Title</span>
+                <input type="text" ng-model="formObj.Title" placeholder="Title of Request">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Description</span>
+                <textarea placeholder="Description of Request" ng-keypress="updateEditor()" id="TextArea" ng-model="formObj.Description" ></textarea>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Approver</span>
+                    <select ng-model="formObj.Approver" ng-options="item for item in formObj.approvers">
+                        </select>
+
+            </label>
+            <a class="button button-block button-balanced" style="margin-left:20%;margin-right:20%" ng-click="submitRequest()"><i class="icon ion-checkmark-round"></i> Submit Request</a>
+
+        </div>
+    </ion-content>
+</ion-view>

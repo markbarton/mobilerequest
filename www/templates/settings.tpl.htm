@@ -1,0 +1,25 @@
+<ion-view title="{{dbTitle}}">
+    <ion-nav-buttons side="right">
+        <a class="button button-icon icon ion-plus" href="#/app/create"></a>
+    </ion-nav-buttons>
+    <div class="bar bar-subheader bar-positive">
+        <h2 class="title icon"><i class="icon ion-gear-a padding-right"></i>Settings</h2>
+    </div>
+    <ion-content class="has-header padding has-subheader">
+        <div class="card">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Domino URL Endpoint</span>
+                    <input type="text" ng-model="formObj.dominoEndPoint">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label"></span>
+                    <ion-checkbox ng-model="formObj.isChecked">Update Server Side</ion-checkbox>
+                </label>
+
+                <a class="button button-block button-balanced" style="margin-left:20%;margin-right:20%" ng-click="saveEndpoint()"><i class="icon ion-checkmark-round"></i> Save</a>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,58 @@
+<ion-side-menus>
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-bar class="bar bar-dark">
+            <ion-nav-back-button class="button-clear">
+                <i class="ion-arrow-left-c"></i>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="main" animation="slide-left-right"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" class="dark-bg dark-border">
+        <header class="bar bar-header bar-dark">
+            <h1 class="title">Expense Tracker</h1>
+        </header>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item class="item item-positive item-icon-left" href="#/app/home" menu-close>
+                    <i class="icon ion-home"></i>
+                    Home
+                </ion-item>
+                <ion-item class="item item-positive item-icon-left" href="#/app/create" menu-close>
+                    <i class="icon ion-plus"></i>
+                    Create Request
+                </ion-item>
+                <ion-item class="item item-positive item-icon-left" href="#/app/settings" menu-close>
+                    <i class="icon ion-gear-a"></i>
+                    Settings
+                </ion-item>
+                <ion-item class="item item-positive item-icon-left" href="#/app/help" menu-close>
+                    <i class="icon ion-help-circled"></i>
+                    Help
+                </ion-item>
+
+                <div class="item item-divider">
+                    Views
+                </div>
+                <ion-item class="item item-assertive item-icon-left" href="#/app/pendingapproval" menu-close>
+                    <i class="icon fa fa-list-alt fa-ionicon"></i>
+                    Pending Approval
+                </ion-item>
+                <ion-item class="item item-assertive item-icon-left" href="#/app/approved" menu-close>
+                    <i class="icon fa fa-list-alt fa-ionicon"></i>
+                  Approved
+                </ion-item>
+                <ion-item class="item item-assertive item-icon-left" href="#/app/rejected" menu-close>
+                    <i class="icon fa fa-list-alt fa-ionicon"></i>
+                    Rejected
+                </ion-item>
+                <ion-item class="item item-dark item-icon-left" ng-show="isWebView" on-tap="exit()" menu-close>
+                    <i class="icon ion-power"></i>
+                    Exit
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

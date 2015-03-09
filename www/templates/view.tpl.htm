@@ -1,0 +1,18 @@
+<ion-view title="{{dbTitle}}">
+
+    <ion-nav-buttons side="right">
+        <a class="button button-icon icon ion-plus" href="#/app/create"></a>
+
+    </ion-nav-buttons>
+    <div class="bar bar-subheader bar-positive">
+        <h2 class="title icon"><i class="icon fa fa-list-alt fa-ionicon padding-right"></i>{{status}}</h2>
+    </div>
+    <ion-content class="has-header padding has-subheader">
+        <div class="list">
+            <a class="item item-icon-right" ng-repeat="request in viewData" ng-click="selectRequest(request.docreference)">
+                {{request.title}}
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
